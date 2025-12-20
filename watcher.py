@@ -14,7 +14,7 @@ from rich.console import Console
 from rich.table import Table
 from rich.live import Live
 
-# Setup UI and Load Brain
+# Setup UI and Load Model
 console = Console()
 try:
     model = joblib.load('sentinela_model.pkl')
