@@ -1,3 +1,11 @@
+"""
+Project: Sentinela-AI-NIDS
+Author: Alfayez Ahmad
+Copyright: (c) 2025 Alfayez Ahmad
+License: Apache License 2.0
+Description: Real-time Network Forensics Engine.
+"""
+
 import sys
 import joblib
 import pandas as pd
