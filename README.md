@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Platform](https://img.shields.io/badge/Platform-macOS%20ARM64%20(Optimized)-lightgrey)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/github/license/alfayezahmad/Sentinela-AI-NIDS?style=flat-square&color=blue)
 
 ## 📌 Overview
 **Sentinela** is a lightweight, AI-powered Network Intrusion Detection System (NIDS) designed for real-time traffic analysis. 
