@@ -1,4 +1,4 @@
-# 🛡️ Sentinela AI: Real-Time Network Forensics Engine
+# Sentinela AI: Real-Time Network Forensics Engine
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Status](https://img.shields.io/badge/Status-Active-success)
