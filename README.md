@@ -55,6 +55,13 @@ graph TD
         style C fill:#1f6feb,color:white,stroke:none
     end
 ```
+## Live Inference Output
+The Sentinela watcher engine utilizes the `Rich` library to render a live, asynchronous forensics dashboard directly in the terminal, providing instant classification of intercepted packets.
+
+<p align="center">
+    <img width="525" height="273" alt="Screenshot 2026-01-02 at 23 34 10" src="https://github.com/user-attachments/assets/3587e5cd-8f5a-44e5-8b1f-6b1b4a1b9b61" />  
+</p>
+
 ## Mathematical Foundation: Feature Evaluation
 The core of the detection engine relies on a Random Forest ensemble. The model evaluates the quality of network flow features (Packet Size, Protocol, Destination Port) using **Gini Impurity** to determine optimal decision node splits:
 
