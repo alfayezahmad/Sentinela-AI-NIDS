@@ -31,9 +31,10 @@ def build_model():
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X, y)
 
-    # Export model artifact for inference engine
-    joblib.dump(model, 'sentinela_model.pkl')
-    print("[SUCCESS] Model successfully exported to 'sentinela_model.pkl'")
+    # Export model artifact for inference engine (Cloud-native path handling)
+    model_path = os.environ.get("MODEL_PATH", "sentinela_model.pkl")
+    joblib.dump(model, model_path)
+    print(f"[SUCCESS] Model successfully exported to '{model_path}'")
 
 if __name__ == "__main__":
     build_model()
