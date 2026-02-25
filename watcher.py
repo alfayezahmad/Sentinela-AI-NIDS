@@ -6,6 +6,7 @@ License: Apache License 2.0
 Description: Real-time Network Forensics Engine.
 """
 
+import os
 import sys
 import joblib
 import pandas as pd
@@ -16,10 +17,12 @@ from rich.live import Live
 
 # Setup UI and Load Model
 console = Console()
+model_path = os.environ.get("MODEL_PATH", "sentinela_model.pkl")
+
 try:
-    model = joblib.load('sentinela_model.pkl')
-except:
-    console.print("[red]Error: 'sentinela_model.pkl' not found! Run engine.py first.[/red]")
+    model = joblib.load(model_path)
+except Exception:
+    console.print(f"[red]Error: '{model_path}' not found! Run engine.py first.[/red]")
     sys.exit()
 
 
@@ -58,5 +61,5 @@ def sniff_callback(packet):
 
 # Main Loop
 with Live(generate_table(packet_log), refresh_per_second=4) as live:
-    console.print(f"[bold yellow][*] Sentinela active on M4 Pro. Sniffing live packets...[/bold yellow]")
+    console.print("[bold yellow][*] Sentinela active on M4 Pro. Sniffing live packets...[/bold yellow]")
     sniff(prn=lambda x: [sniff_callback(x), live.update(generate_table(packet_log))], store=0)
